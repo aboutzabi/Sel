@@ -52,7 +52,7 @@ def create_driver():
     
     options = uc.ChromeOptions()
     options.add_argument(f'user-agent={user_agent}')
-    options.add_argument('--headless')  # Use new headless mode if available
+    #options.add_argument('--headless')  # Use new headless mode if available
     options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_argument('--window-size=1920x1080')
     options.add_argument('--disable-infobars')
@@ -60,6 +60,8 @@ def create_driver():
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
     options.add_argument('--disable-software-rasterizer')
+    options.add_argument('--disable-extensions')
+    options.add_argument('--disable-popup-blocking')
 
     driver = uc.Chrome(options=options)
     
@@ -94,6 +96,7 @@ for session in range(1, 1001):
     try:
         # Create a new driver with a random user agent and headers
         driver = create_driver()
+        driver.execute_script('window.localStorage.setItem("ads_blocked", "false")')
         random_link = random.choice(Mylinks)
 
         # Open the webpage
