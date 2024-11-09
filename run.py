@@ -63,7 +63,11 @@ def create_driver():
     options.add_argument('--disable-extensions')
     options.add_argument('--disable-popup-blocking')
 
-    driver = uc.Chrome(options=options)
+    try:
+        ]driver = uc.Chrome(options=options, timeout=30)
+    # your selenium interactions here
+    except Exception as e:
+        print(f"Error occurred: {e}")
     
     # Disable the automation flag
     driver.execute_cdp_cmd(
@@ -104,7 +108,7 @@ for session in range(1, 1001):
         human_like_delay(3, 5)  # Wait for a bit before interacting
 
         # Wait until the #bmd-inp-wrapper div is present in the DOM
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, "bmd-inp-wrapper"))
         )
 
