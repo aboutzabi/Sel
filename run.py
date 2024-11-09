@@ -64,7 +64,7 @@ def create_driver():
     options.add_argument('--disable-popup-blocking')
 
     try:
-        ]driver = uc.Chrome(options=options, timeout=30)
+        driver = uc.Chrome(options=options, timeout=30)
     # your selenium interactions here
     except Exception as e:
         print(f"Error occurred: {e}")
