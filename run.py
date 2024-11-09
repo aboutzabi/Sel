@@ -52,7 +52,7 @@ def create_driver():
     
     options = uc.ChromeOptions()
     options.add_argument(f'user-agent={user_agent}')
-    # options.add_argument('--headless')  # Use new headless mode if available
+    options.add_argument('--headless')  # Use new headless mode if available
     options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_argument('--window-size=1920x1080')
     options.add_argument('--disable-infobars')
@@ -84,9 +84,9 @@ Mylinks = [
     "https://futuerdevhub.blogspot.com/2024/11/12-apps-that-pay-you-to-do-nothingeven.html",
     "https://futuerdevhub.blogspot.com/2024/11/18-apps-that-pay-you-to-do-nothingeven.html",
     "https://futuerdevhub.blogspot.com/2024/08/my-7-income-sources-with-one-ai-tool.html",
-    "https://futuerdevhub.blogspot.com/2024/11/how-to-build-10k-per-month-one-person.html",
     "https://futuerdevhub.blogspot.com/2024/11/3-new-online-earning-platforms-to-make.html",
-    "https://futuerdevhub.blogspot.com/2024/11/get-paid-10000-monthly-with-amazon.html"
+    "https://futuerdevhub.blogspot.com/2024/11/get-paid-10000-monthly-with-amazon.html",
+    "https://futuerdevhub.blogspot.com/2024/11/top-10-innovative-ai-fueled-sidehustles.html"
 ]
 
 # Run 1000 sessions
