@@ -97,6 +97,7 @@ Mylinks = [
 
 # Run 1000 sessions
 for session in range(1, 1001):
+    driver= none
     try:
         # Create a new driver with a random user agent and headers
         driver = create_driver()
