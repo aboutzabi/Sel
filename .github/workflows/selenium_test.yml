@@ -30,4 +30,4 @@ jobs:
 
     - name: Run Selenium script
       run: |
-        python run.py
+        python -u run.py
